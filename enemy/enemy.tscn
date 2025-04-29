@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bl1td0gcl1chg"]
+
+[ext_resource type="Script" uid="uid://byrcxv485nlxj" path="res://enemy/enemy.gd" id="1_2mvqj"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_scxef"]
+radius = 2.10693
+
+[node name="Enemy" type="Node3D"]
+script = ExtResource("1_2mvqj")
+
+[node name="Body" type="CSGBox3D" parent="."]
+transform = Transform3D(0.584582, 0, 0, 0, 0.584582, 0, 0, 0, 0.584582, 0, 1.11388, 0)
+
+[node name="Detection Area" type="Area3D" parent="."]
+transform = Transform3D(1.32028, 0, 0, 0, 1.32028, 0, 0, 0, 1.32028, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Detection Area"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.08182, 0)
+shape = SubResource("CylinderShape3D_scxef")
