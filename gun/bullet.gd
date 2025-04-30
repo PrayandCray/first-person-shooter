@@ -1,6 +1,7 @@
 extends Node3D
 
 var velocity = Vector3.ZERO
+var direction: Vector3 = Vector3.ZERO
 @export var lifetime := 3.5
 @export var damage := 10
 @export var speed = 100.0
@@ -8,6 +9,8 @@ var velocity = Vector3.ZERO
 func _ready() -> void:
 	
 	#apply_impulse(Vector3.ZERO, transform.basis.z * -speed) # to fire forward from origin on the axis and move away from
+	look_at(global_transform.origin + direction, Vector3.UP)
+	velocity = direction.normalized() * speed
 	await get_tree().create_timer(lifetime).timeout
 	queue_free()
 

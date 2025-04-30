@@ -84,3 +84,11 @@ func _headbob(time) -> Vector3:
 	pos.y = sin(time * BOB_FREQ) * BOB_AMP
 	pos.x = cos(time * BOB_FREQ / 2) * BOB_AMP
 	return pos
+
+func crosshair_raycast():
+	var screen_center = get_viewport().get_visible_rect().size * 0.5
+	var ray_origin = camera.project_ray_origin(screen_center)
+	var ray_direction = camera.project_ray_normal(screen_center)
+	
+	var ray_params = PhysicsRayQueryParameters3D.create(ray_origin, ray_origin + ray_direction * 1000)
+	return get_world_3d().direct_space_state.intersect_ray(ray_params)

@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://cmafmom38txs0"]
+[gd_scene load_steps=8 format=3 uid="uid://cmafmom38txs0"]
 
+[ext_resource type="PackedScene" uid="uid://dhrr1nvnnb58c" path="res://ui/ui.tscn" id="1_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://bvew4yfwkcxkv" path="res://world/world.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://ikcx7tn4p0ve" path="res://player/player.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://cvo5pjf05boq6" path="res://enemy/enemy_spawner.tscn" id="3_h2yge"]
@@ -19,12 +20,7 @@ glow_enabled = true
 
 [node name="Main" type="Node"]
 
-[node name="Sun" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
-shadow_enabled = true
-
-[node name="WorldEnv" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_1bvp3")
+[node name="UI" parent="." instance=ExtResource("1_1bvp3")]
 
 [node name="World" parent="." instance=ExtResource("1_ig7tw")]
 transform = Transform3D(0.99634, 0, 0, 0, 0.99634, 0, 0, 0, 0.99634, 0, 0, 0)
@@ -33,3 +29,10 @@ transform = Transform3D(0.99634, 0, 0, 0, 0.99634, 0, 0, 0, 0.99634, 0, 0, 0)
 
 [node name="Enemy Spawner" parent="." instance=ExtResource("3_h2yge")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5065, 1.30901, 0)
+
+[node name="WorldEnv" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_1bvp3")
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true

@@ -7,4 +7,8 @@
 script = ExtResource("1_0qvfs")
 bullet_scene = ExtResource("2_qhldj")
 
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D(0.225461, 0, 0, 0, -9.85523e-09, 0.225461, 0, -0.225461, -9.85523e-09, 0, 0, 0)
+
 [node name="muzzle" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.226796)
