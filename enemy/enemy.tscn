@@ -10,6 +10,8 @@ script = ExtResource("1_2mvqj")
 
 [node name="Body" type="CSGBox3D" parent="."]
 transform = Transform3D(0.584582, 0, 0, 0, 0.584582, 0, 0, 0, 0.584582, 0, 1.11388, 0)
+use_collision = true
+collision_layer = 2
 
 [node name="Detection Area" type="Area3D" parent="."]
 transform = Transform3D(1.32028, 0, 0, 0, 1.32028, 0, 0, 0, 1.32028, 0, 0, 0)

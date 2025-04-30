@@ -27,7 +27,9 @@ shadow_enabled = true
 environment = SubResource("Environment_1bvp3")
 
 [node name="World" parent="." instance=ExtResource("1_ig7tw")]
+transform = Transform3D(0.99634, 0, 0, 0, 0.99634, 0, 0, 0, 0.99634, 0, 0, 0)
 
 [node name="Player" parent="." instance=ExtResource("2_0xm2m")]
 
 [node name="Enemy Spawner" parent="." instance=ExtResource("3_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5065, 1.30901, 0)

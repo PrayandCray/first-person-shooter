@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bk668vo54j0pu"]
+
+[ext_resource type="Script" uid="uid://dq142cwrwm60v" path="res://gun/gun.gd" id="1_0qvfs"]
+[ext_resource type="PackedScene" uid="uid://bv7xh5e5weau" path="res://gun/bullet.tscn" id="2_qhldj"]
+
+[node name="Gun" type="Node3D"]
+script = ExtResource("1_0qvfs")
+bullet_scene = ExtResource("2_qhldj")
+
+[node name="muzzle" type="Marker3D" parent="."]
